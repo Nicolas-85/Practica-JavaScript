@@ -15,6 +15,39 @@
 //         }) // mostramos la información en formato JSON
 // })
 
-button.addEventListener('click', () => {
+// const lista = document.getElementById('list')
+// console.log(lista)
+// button.addEventListener('click', () => {
+//     axios({
+//         method: 'GET',
+//         url: 'https://jsonplaceholder.typicode.com/users'
+//     }).then((res) => {
+//         console.log(res) 
+//         const info = res.data
+//         console.log(info)
+//         const fragment = document.createDocumentFragment()
+//         for (const element of info) {
+//             const nombre = element.name
+//             const itemList = document.createElement('li') 
+//             itemList.textContent = nombre
+//             fragment.appendChild(itemList)
+//             // console.log(nombre)
+//         }
+//         lista.appendChild(fragment)
+//     }).catch((err) => {
+//         console.log(err)
+//     });
+// })
 
-})//continuar con axios-------
+button.addEventListener('click', () =>{
+    axios({
+        method: 'POST',
+        url: 'https://jsonplaceholder.typicode.com/users',
+        data: {
+            title: 'Nuevo post',
+            dody: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+            userID: 1
+        }
+    }) .then((res)=>console.log(res))
+       .catch((error)=>console.log(error))
+})
