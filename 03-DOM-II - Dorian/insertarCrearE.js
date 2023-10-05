@@ -1,6 +1,6 @@
 // DOM - Crear e Insertar elementos
 // Crear un elemento: document.createElement(element)
-//Escribir texto en un elemento: elemet.textContent = texto
+//Escribir texto en un elemento: element.textContent = texto
 //Escribir HTML en un elemento: element.innerHTML = código HTML
 const days = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
 
